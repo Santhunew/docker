@@ -7,8 +7,24 @@
     <groupId>com.javatechie</groupId>
     <artifactId>docker-jenkins-integration-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
-<build>
-    <finalName>docker-jenkins-integration-sample</finalName>
-</build>
 
+    <build>
+        <finalName>docker-jenkins-integration-sample</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- You can update to the latest version if needed -->
+                <configuration>
+                    <source>17</source> <!-- Set your desired Java version, e.g., 11 -->
+                    <target>17</target> <!-- Set your desired Java version, e.g., 11 -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source> <!-- Set your desired Java version -->
+        <maven.compiler.target>17</maven.compiler.target> <!-- Set your desired Java version -->
+    </properties>
 </project>
